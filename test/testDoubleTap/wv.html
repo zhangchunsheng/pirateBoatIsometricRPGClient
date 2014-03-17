@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>wv</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<style type="text/css">
+			html {
+				/*zoom: 0.8;*/
+			}
+			#test {
+				position: absolute;
+				background: gray;
+				width: 300px;
+				height: 150px;
+				left: 100px;
+				top: 100px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="test">
+			
+		</div>
+		<script src="CocoonJSExtensions/CocoonJS.js"></script>
+		<script src="CocoonJSExtensions/CocoonJS_App.js"></script>
+		<script src="CocoonJSExtensions/CocoonJS_App_ForWebView.js"></script>
+		<script>
+			window.addEventListener("load", function(event) {
+				window.removeEventListener(this);
+				// CocoonJS.App.forward("console.log('Hello from the webview!');");
+				console.log('Hello from the webview!!!');
+                // document.body.style.webkitTransform = "scale(2, 2)";
+				document.documentElement.style.zoom = 0.8;
+				var transform = "scale(1, 0.1)";
+				document.body.style.webkitTransform = transform;
+			});
+
+			var FILL_STYLES = [ 'black', 'white', 'red', 'pink', 'blue', 'green' ];
+			var fillStyleIndex = 0;
+
+			function nextFillStyle() {
+				fillStyleIndex++;
+				fillStyleIndex = fillStyleIndex >= FILL_STYLES.length ? 0 : fillStyleIndex;
+				CocoonJS.App.forward("fillStyle = '" + FILL_STYLES[fillStyleIndex] + "';");
+			}
+			
+			window.addEventListener("touchstart", function(event) {
+				event.preventDefault();
+				console.log("touchstart");
+			});
+
+			window.addEventListener("mouseup", function(event) {
+				//nextFillStyle();
+				console.log("mouseup");
+			});
+
+			window.addEventListener("touchend", function(event) {
+				//nextFillStyle();
+				event.preventDefault();
+				console.log("touchend");
+			});
+		</script>
+	</body>
+</html>

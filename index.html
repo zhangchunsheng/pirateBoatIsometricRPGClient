@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>seaking</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=960,height=640,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="oupengmobile" content="fullscreen,landscape,game" />
+		<meta name="game-engine" content="wozlla" />
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="apple-touch-icon-precomposed" href="114x114.png" />
+		<link rel="apple-touch-startup-image" media="(device-width: 320px) and (-webkit-device-pixel-ratio: 2)" href="114x114.png">
+	</head>
+	<body>
+		<div id="jsapp" align="center">
+			
+		</div>
+
+		<script type="text/javascript" src="./js/CocoonJSExtensions/CocoonJS.js"></script>
+		<script type="text/javascript" src="./js/CocoonJSExtensions/CocoonJS_App.js"></script>
+		<script type="text/javascript" src="./js/CocoonJSExtensions/CocoonJS_App_ForCocoonJS.js"></script>
+
+		<script type="text/javascript" src="./js/lib/melonJS-0.9.7.js"></script>
+		<!-- melonJS_ex start 在web上可以去掉 -->
+		<script type="text/javascript" src="./js/melonJS_ex/loader.js"></script>
+		<!-- melonJS_ex end -->
+		<script type="text/javascript" src="./js/lib/astar.js"></script>
+		<script type="text/javascript" src="./js/lib/graph.js"></script>
+		<script type="text/javascript" src="./js/functions.js"></script>
+		<script type="text/javascript" src="./js/config.js"></script>
+		<script type="text/javascript" src="./js/resources.js"></script>
+		<script type="text/javascript" src="./js/btg.js"></script>
+		<script type="text/javascript" src="./js/base/eventManager.js"></script>
+		<script type="text/javascript" src="./js/base/startup.js"></script>
+		<script type="text/javascript" src="./js/socket.js"></script>
+		<script type="text/javascript" src="./js/pathSearcher.js"></script>
+		<script type="text/javascript" src="./js/loading.js"></script>
+		<script type="text/javascript" src="./js/Screen.js"></script>
+		<script type="text/javascript" src="./js/seaking.js"></script>
+		<script type="text/javascript" src="./js/CharacterBase.js"></script>
+		<script type="text/javascript" src="./js/PlayerEntity.js"></script>
+		<script type="text/javascript" src="./js/BoatBase.js"></script>
+		<script type="text/javascript" src="./js/PirateBoat.js"></script>
+		<script type="text/javascript" src="./js/NpcEntity.js"></script>
+		<script type="text/javascript" src="./js/EnemyEntity.js"></script>
+		<script type="text/javascript" src="./js/EnemyBoat.js"></script>
+		<script type="text/javascript" src="./js/Formation.js"></script>
+		<script type="text/javascript" src="./js/Fight.js"></script>
+		<script type="text/javascript" src="./js/ProgressEntity.js"></script>
+		<script type="text/javascript" src="./js/Buff.js"></script>
+		<script type="text/javascript" src="./js/MultipleImageLayer.js"></script>
+		<script type="text/javascript" src="./js/Seaport.js"></script>
+		<script type="text/javascript" src="./js/Effect.js"></script>
+		<script type="text/javascript" src="./js/Font.js"></script>
+		<script type="text/javascript" src="./js/Click.js"></script>
+		<script type="text/javascript" src="./js/ui/base.js"></script>
+		<script type="text/javascript" src="./main.js"></script>
+
+		<script type="text/javascript">
+			CocoonJS.App.onLoadInTheWebViewSucceed.addEventListener(function() {
+				console.log("onLoadInTheWebViewSucceed");
+				CocoonJS.App.showTheWebView();
+				try {
+				document.getElementById('CocoonJS_App_ForCocoonJS_WebViewDiv').style.display = 'none';
+				}catch(e) {}
+			});
+
+			CocoonJS.App.onLoadInTheWebViewFailed.addEventListener(function() {
+				console.log("onLoadInTheWebViewFailed");
+			});
+
+			CocoonJS.App.loadInTheWebView("ui.html");
+
+		</script>
+	</body>
+</html>

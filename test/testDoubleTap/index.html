@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<body>
+		<script src="CocoonJSExtensions/CocoonJS.js"></script>
+		<script src="CocoonJSExtensions/CocoonJS_App.js"></script>
+		<script src="CocoonJSExtensions/CocoonJS_App_ForCocoonJS.js"></script>
+		<script>
+			var fillStyle = 'black';
+			var canvas = document.createElement("canvas");
+			var canvas2DContext = canvas.getContext("2d");
+			document.body.appendChild(canvas);
+
+			setInterval(function(event) {
+				canvas2DContext.fillStyle = fillStyle;
+				canvas2DContext.fillRect(0, 0, canvas.width, canvas.height);
+			}, 1 / 60);
+
+			CocoonJS.App.onLoadInTheWebViewSucceed.addEventListener(function() {
+				console.log("onLoadInTheWebViewSucceed");
+				CocoonJS.App.showTheWebView();
+			});
+
+			CocoonJS.App.onLoadInTheWebViewFailed.addEventListener(function() {
+				console.log("onLoadInTheWebViewFailed");
+			});
+
+			CocoonJS.App.loadInTheWebView("wv.html");
+		</script>
+	</body>
+</html>

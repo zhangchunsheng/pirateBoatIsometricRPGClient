@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>seaking</title>
+		<meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,target-densitydpi=device-dpi, initial-scale=1, user-scalable=0">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="oupengmobile" content="fullscreen,landscape,game" />
+		<meta name="game-engine" content="wozlla" />
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="apple-touch-icon-precomposed" href="114x114.png" />
+		<link rel="apple-touch-startup-image" media="(device-width: 320px) and (-webkit-device-pixel-ratio: 2)" href="114x114.png">
+		<link href="css/index.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" type="text/css" href="./css/ui.common.css">
+		<link rel="stylesheet" type="text/css" href="./css/ui.mainScene.css">
+		<link rel="stylesheet" type="text/css" href="./css/ui.fightScene.css">
+		<link rel="stylesheet" type="text/css" href="./css/ui.chat.css">
+		<link rel="stylesheet" type="text/css" href="./css/ui.character.css">
+		<link rel="stylesheet" type="text/css" href="./css/ui.login.css">
+		<link rel="stylesheet" type="text/css" href="./css/ui.casinoScene.css">
+		<style type="text/css">
+            *, ::after, ::before { -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+			.div {
+				background: gray;
+				width: 100px;
+				height: 100px;
+				margin: 0 auto;
+				margin-bottom: 10px;
+			}
+		</style>
+	</head>
+	<body onselectstart="return false;">
+        <div id="canvas" style="width: 100%;height: 100%;"></div>
+        <div id="loadingbg"></div>
+        <div id="loading">
+            <div class="meter animate">
+                <span style="width: 100%"><span></span></span>
+            </div>
+        </div>
+        <div id="loadingInfo">
+            正在读取地图...
+        </div>
+        <div id="reconnect">
+            服务器连接中断
+            <div onclick="btg.initSocket()">重新连接</div>
+        </div>
+		<script>
+            window.btg = {};
+		</script>
+		<script type="text/javascript" src="./js/CocoonJSExtensions/CocoonJS.js"></script>
+		<script type="text/javascript" src="./js/CocoonJSExtensions/CocoonJS_App.js"></script>
+		<script type="text/javascript" src="./js/CocoonJSExtensions/CocoonJS_App_ForWebView.js"></script>
+		<script type="text/javascript" src="./js/base/eventManager.js"></script>
+		<script type="text/javascript" src="./js/lib/melonJS-0.9.7.1.js"></script>
+		<script type="text/javascript" src="./js/lib/ui/lib.js"></script>
+		<script type="text/javascript" src="./js/lib/ui/uicore.js"></script>
+		<script type="text/javascript" src="./js/lib/ui/window.js"></script>
+		<script type="text/javascript" src="./js/lib/ui/iscroll.js"></script>
+        <script type="text/javascript" src="./js/ui/loading.js"></script>
+		<script type="text/javascript" src="./js/ui_config_960.js"></script>
+		<script type="text/javascript" src="./js/ui_resources.js"></script>
+		<script type="text/javascript" src="./js/ui.js"></script>
+		<script type="text/javascript" src="./js/ui/mainScene.js"></script>
+		<script type="text/javascript" src="./js/ui/fightScene.js"></script>
+		<script type="text/javascript" src="./js/ui/baseWindow.js"></script>
+		<script type="text/javascript" src="./js/ui/ui.windowManager.js"></script>
+		<script type="text/javascript" src="./js/ui/taskWindow.js"></script>
+		<script type="text/javascript" src="./js/ui/chatWindow.js"></script>
+		<script type="text/javascript" src="./js/ui/characterWindow.js"></script>
+		<script type="text/javascript" src="./js/ui/packageWindow.js"></script>
+		<script type="text/javascript" src="./js/ui/dialogueScene.js"></script>
+		<script type="text/javascript" src="./js/ui/skillWindow.js"></script>
+		<script type="text/javascript" src="./js/ui/pirateBoatWindow.js"></script>
+		<script type="text/javascript" src="./js/ui/strengthenWindow.js"></script>
+		<script type="text/javascript" src="./js/ui/strengthenWindow.recast.js"></script>
+		<script type="text/javascript" src="./js/ui/strengthenWindow.made.js"></script>
+		<script type="text/javascript" src="./js/ui/strengthenWindow.research.js"></script>
+		<script type="text/javascript" src="./js/ui/strengthenWindow.transform.js"></script>
+		<script type="text/javascript" src="./js/ui/ui.messageBox.js"></script>
+		<script type="text/javascript" src="./js/ui/formationWindow.js"></script>
+		<script type="text/javascript" src="./js/ui/formationWindow.formation.js"></script>
+		<script type="text/javascript" src="./js/ui/formationWindow.battleformation.js"></script>
+		<script type="text/javascript" src="./js/ui/formationWindow.governing.js"></script>
+		<script type="text/javascript" src="./js/ui/casinoScene.js"></script>
+		<script type="text/javascript" src="./js/ui/ui.dice.js"></script>
+		<script type="text/javascript" src="./js/ui/cellPopup.js"></script>
+		<script type="text/javascript" src="./js/ui/shopWindow.js"></script>
+		<script type="text/javascript" src="./js/ui/fightSettleWindow.js"></script>
+		<script type="text/javascript" src="./js/ui/ui_startup.js"></script>
+	</body>
+</html>

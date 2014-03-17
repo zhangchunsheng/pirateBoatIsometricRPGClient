@@ -1,0 +1,44 @@
+/**
+ * Copyright(c)2013,Wozlla,www.wozlla.com
+ * Version: 1.0
+ * Author: Dewey
+ * Date: 2013-03-18
+ * Description: 赌场
+ */
+#casino-stake {
+	position: absolute;
+	border-radius: 5px;
+	border: 1px solid black;
+	box-shadow: 0 0 7px #28d7ff inset; 
+	background: -webkit-linear-gradient(top, #0088CC, #0C161D);
+}
+#rb {
+	position: absolute;
+	border-radius: 10px;
+	border: 1px solid #28d7ff;
+	background: #035580;
+	color: #FFFFFF;
+	font-size: 13px;
+	text-align: center;
+}
+#casino-stake-name {
+	position: absolute;
+	color: #28d7ff;
+	text-align: center;
+	background: url(../res/ui/layout/g/casino_font_bg.png) no-repeat;
+}
+.casino-btn {
+	position: absolute;
+	color: #460f00;
+	text-align: center;
+	font-weight: bold;
+	line-height: 70px;
+	background: url(../res/ui/btn/casino_btn.png) no-repeat;
+}
+.casino-btn:active {
+	background: url(../res/ui/btn/casino_btn_h.png) no-repeat;
+}
+#casino-stake-picture {
+	position: absolute;
+	background: url(../res/ui/ci/0/0_photo.png) no-repeat;
+}

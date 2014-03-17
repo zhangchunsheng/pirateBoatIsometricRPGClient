@@ -1,0 +1,112 @@
+/**
+ * Copyright(c)2013,Wozlla,www.wozlla.com
+ * Version: 1.0
+ * Author: Peter Zhang
+ * Date: 2013-03-06
+ * Description: 戰鬥場景
+ */
+#fightScene_top .fight-round-num {
+	position: absolute;
+	height: 22px;
+	width: 22px;
+	color: #00d3ff;
+	text-align: center;
+	line-height: 22px;
+}
+
+#fightScene_top .water-drop {
+	position: absolute;
+	top: 22px;
+	height: 35px;
+	width: 27px;
+	line-height: 36px;
+	color: #FFFFFF;
+	text-align: center;
+	background: url(../res/ui/layout/f/fi_mark_bg.png);
+}
+
+.fight-character-bg {
+	height: 60px;
+	width: 60px;
+	background: -webkit-linear-gradient(top, #031819, #0e345a);
+	border-radius: 6px;
+	font-size: 0.8em;
+	box-shadow: 0 0 1px rgb(0, 234, 255);
+	border: 1px solid black;
+	position: absolute;
+}
+
+.fight-character {
+	max-width: 60px;
+}
+
+.fight-character-bg:active {
+	box-shadow: 0 0 5px rgb(0, 234, 255);
+}
+
+#fightScene_rightBottom .skipBattle {
+	position: absolute;
+	width: 128px;
+	height: 80px;
+	text-align: center;
+	line-height: 80px;
+	background: url(../res/ui/btn/chat_submit.png);
+}
+
+#fightScene_rightBottom .skipBattle:active {
+	background: url(../res/ui/btn/chat_submit_h.png);
+}
+
+.fight-tag {
+	position: absolute;
+	text-align: center;
+	line-height: 30px;
+	font-size: 16px;
+	z-index: 512;
+}
+.win {
+	color: #f4b98e;
+	text-shadow: 0 0 2px #000000;
+	background: url(../res/ui/layout/f/res_win_tab.png) no-repeat;
+}
+.lose {
+	color: #252429;
+	text-shadow: 0 0 2px #3d3b43;
+	background: url(../res/ui/layout/f/res_lose_tab.png) no-repeat;
+}
+.fight-purple-txt {
+	position: absolute;
+	color: #e040fc;
+	font-size: 18px;
+	text-shadow: 0 0 5px #000000;
+	z-index: 512;
+}
+.fight-golden-txt {
+	position: absolute;
+	color: #ffa200;
+	font-size: 18px;
+	text-shadow: 0 0 5px #000000;
+	z-index: 512;
+}
+.fight-star {
+	position: absolute;
+	z-index: 512;
+	background: url(../res/ui/layout/f/res_star_bg.png) no-repeat;
+}
+.shine {
+	background: url(../res/ui/layout/f/res_starwin_bg.png) no-repeat;
+}
+.fight-cell {
+	position: absolute;
+	background: -webkit-linear-gradient(top, #031819, #0e345a);
+	border-radius: 6px;
+	position: absolute;
+	box-shadow: 0 0 10px #1a1a1d inset;	
+	z-index: 512;
+}
+.cell-win {
+	border: 1px solid #00eaff;	
+}
+.cell-lose {
+	border-bottom: 1px solid #414f6b;
+}

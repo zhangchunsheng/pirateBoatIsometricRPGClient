@@ -1,0 +1,75 @@
+/**
+ * Copyright(c)2013,Wozlla,www.wozlla.com
+ * Version: 1.0
+ * Author: Peter Zhang
+ * Date: 2013-02-26
+ * Description: 聊天樣式
+ */
+#chatBtn {
+	position: absolute;
+	background: url(../res/ui/btn/chat_icon.png);
+}
+#chatRoom {
+	border-radius: 5px;
+	border: 2px solid black;
+	background: -webkit-linear-gradient(top, #333333, #181818);
+	position: absolute;
+	overflow: hidden;
+}
+
+#chatRoom #chatContent {
+	min-height: 107px;
+	height: auto;
+	/*background: #d52ed5;*/
+	position: absolute;
+}
+#chatRoom #chatContent p {
+	margin: 10px 0 0 20px;
+}
+#chatRoom #chatContent p .nickname {
+	color: #54b320;
+	text-shadow: 0 0 2px #000000;
+}
+#chatRoom #chatContent p .chatMessage {
+	color: white;
+}
+#chat-input-div {
+	position: absolute;
+	display: none;
+}
+#chat-input-div input {
+	bottom: 0px;
+	left: 0px;
+	line-height: 30px;
+	font-size: 1.2em;
+	color: white;
+	position: absolute;
+	background: #0f0f0f;
+	border: 2px solid #353636;
+	border-radius: 5px;
+  	box-shadow: 0 0 5px #353637 inset;
+	z-index: 258;
+}
+#chat-submit {
+	top: -16px;
+	left: 692px;
+	line-height: 80px;
+	font-size: 1.3em;
+	text-align: center;
+	position: absolute;
+	background: url(../res/ui/btn/chat_submit.png);
+	z-index: 258;
+}
+#chat-submit:hover, #chat-submit:active {
+	background: url(../res/ui/btn/chat_submit_h.png);
+}
+#chatWindow-close-btn {
+	height: 60px;
+	width: 60px;
+	position: absolute;
+	background: url(../res/ui/btn/close.png);
+	z-index: 258;
+}
+#chatWindow-close-btn:hover, #chatWindow-close-btn:active {
+	background: url(../res/ui/btn/close_h.png);
+}

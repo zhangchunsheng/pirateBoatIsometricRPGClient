@@ -1,0 +1,44 @@
+Hey Peter. Since every character will have different animations, it means that they will hit, displace, etc. at different time.
+
+SO, this means you need a FUNCTION that will say when/how they will act.r
+
+Your function must include the following variables :
+
+Attack_go		->	This define when the character start displacing, if 0, he stay at his/her original place.
+Attack_stop		->	This define when the character stop displacing.
+Attack_hit		->	This define when the character HIT his target.
+Attack_range		->	This define the distance between the character and his target when he hit him/her. If 0, it means it is a long range attack.
+
+Defense_dodge		->	This define when the character DODGE or BLOCK the attack. When a character dodge an attack, this frame must be played SIMULTANEOUSLY with the Attack_hit frame of his enemy. This means you must start the Defense animation a number of frames before the HIT frame equal to - Defense_dodge (for example, if the character "Z" Attack_hit=11, and the character "X" Defense_dodge=6, then you will start playing the Defense animation of "X" at frame 11-6=5).
+
+Hit_hit			->	This define when the character is HIT by the attacker. It works LIKE the Defense_dodge variable.
+
+Death_hit		->	Works exactly like the Hit_hit variable
+
+Skill_go		->	See Attack_go.
+Skill_stop		->	See Attack_stop.
+Skill_hit		->	See Attack_hit.
+Skill_range		->	See Attack_range.
+
+For this function, you will pick the values of the variables in a table in which you store all the characters values.
+You also have a table in which are stored the position of every battle slot (each character is placed in a slot during the battle)
+
+So, your function will calculate for you the distance between characte Z and X, when it must play the defense animation or hit animation, death animation, etc.
+Basicly it should look like this :
+
+Firstly, you input in the slot table which character is in which slot. Then ->
+
+Attacker.vPositionX = slot.x
+Attacker.vPositionY = slot.y
+Defender.vPositionX = slot.x
+Defender.vPositionY = slot.y
+
+if SKILL
+vDistance = (Attacker.vPositionX+Defender.vPositionX)-Skill_range   (Here you must do a triangulation to know where to stop the character exactly ... I am not strong in maths so I let you imagine it)
+	if DEFENSE vPlay = (Attacker.Skill_hit-Defender.Defense_dodge)
+	elseif HIT vPlay = (Attacker.Skill_hit-Defender.Hit_hit)
+
+if ATTACK
+vDistance = (Attacker.vPositionX+Defender.vPositionX)-Attack_range   (Here you must do a triangulation to know where to stop the character exactly ... I am not strong in maths so I let you imagine it)
+	if DEFENSE vPlay = (Attacker.Attack_hit-Defender.Defense_dodge)
+	elseif HIT vPlay = (Attacker.Attack_hit-Defender.Hit_hit)

@@ -1,0 +1,82 @@
+/**
+ * Copyright(c)2013,Wozlla,www.wozlla.com
+ * Version: 1.0
+ * Author: Peter Zhang
+ * Date: 2013-02-26
+ * Description: 登錄頁面樣式
+ */
+#form {
+	height: 345px;
+	width: 655px;
+	position: absolute;
+	top: 295px;
+	left: 160px;
+	padding: 0 auto;
+}
+#form input[type="text"] {
+	height: 39px;
+	width: 259px;
+  	line-height: normal;
+	border-radius: 5px;
+	background: transparent;
+  	font-size: 100%;
+  	vertical-align: middle;
+  	border: solid 1px #2c2d28;
+  	box-shadow: 0 0 5px #1c1d1a inset;
+  	margin: 10px 0 20px 10px;
+}
+
+#form .input-wrap {
+	font-size: 1.4em;
+	padding-left: 30px;
+	height: 65px;
+}
+
+#form #changeUser {
+	height: 39px;
+	width: 109px;
+	/*margin: -120px 0 0 455px;*/
+	top: -120px;
+	left: 455px;
+	background: url(../res/ui/layout/login/changeUser.png);
+}
+#form #changeUser:hover, #form #changeUser:active {
+	background: url(../res/ui/layout/login/changeUser_h.png);
+	cursor: pointer;
+}
+#form #login {
+	height: 106px;
+	width: 122px;
+	/*margin: 160px 0 0 250px;	*/
+	top: 160px;
+	left: 250px;
+	background: url(../res/ui/layout/login/login.png);
+}
+#form #login:hover, #form #login:active {
+	background: url(../res/ui/layout/login/login_h.png);
+	cursor: pointer;
+}
+#form #backToLogin {
+	height: 98px;
+	width: 114px;
+	/*margin: 25px 0 0 20px;*/
+	top: 25px;
+	left: 20px;
+	background: url(../res/ui/layout/login/backToLogin.png);
+}
+#form #backToLogin:hover, #form #backToLogin:active {
+	cursor: pointer;
+	background: url(../res/ui/layout/login/backToLogin_h.png);
+}
+#form #createUser {
+	height: 98px;
+	width: 114px;
+	/*margin: -98px 0 0 520px;*/
+	top: -98px;
+	left: 520px;
+	background: url(../res/ui/layout/login/createUser.png);
+}
+#form #createUser:hover, #form #createUser:active {
+	cursor: pointer;
+	background: url(../res/ui/layout/login/createUser_h.png);
+}

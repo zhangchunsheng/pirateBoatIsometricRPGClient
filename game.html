@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>seaking</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=960,height=640,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="oupengmobile" content="fullscreen,landscape,game" />
+		<meta name="game-engine" content="wozlla" />
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="apple-touch-icon-precomposed" href="114x114.png" />
+		<link rel="apple-touch-startup-image" media="(device-width: 320px) and (-webkit-device-pixel-ratio: 2)" href="114x114.png">
+		<link rel="stylesheet" type="text/css" href="./css/index.css" />
+		<link rel="stylesheet" type="text/css" href="./css/ui.common.css">
+		<link rel="stylesheet" type="text/css" href="./css/ui.mainScene.css">
+		<link rel="stylesheet" type="text/css" href="./css/ui.fightScene.css">
+		<link rel="stylesheet" type="text/css" href="./css/ui.chat.css">
+		<link rel="stylesheet" type="text/css" href="./css/ui.charactor.css">
+		<link rel="stylesheet" type="text/css" href="./css/ui.login.css">
+		<link rel="stylesheet" type="text/css" href="./css/ui.casinoScene.css">
+	</head>
+	<body>
+		<div id="info" align="center" style="position:absolute;left: 100px;top: 460px;z-index:100">
+			<font style ="font-size: 20px; font-family: Courier New; color: #FFFFFF">
+				<span id="framecounter">(0/0 fps)</span>
+                <span id="performance"></span>
+                <script>
+                    window.per = document.getElementById('performance');
+                </script>
+			</font>
+		</div>
+		<div id="jsapp" align="center">
+			
+		</div>
+		<div id="loadingbg"></div>
+		<div id="loading">
+			<div class="meter animate">
+				<span style="width: 100%"><span></span></span>
+			</div>
+		</div>
+		<div id="loadingInfo">
+			正在读取地图...
+		</div>
+		<div id="tips">
+			<img src="./res/ui/layout/turn.png"></img>
+		</div>
+		<div id="reconnect">
+			服务器连接中断
+			<div onclick="btg.initSocket()">重新连接</div>
+		</div>
+		<script type="text/javascript" src="./js/ui/loading.js"></script>
+		<script type="text/javascript" src="./js/lib/game.js"></script>
+		<script type="text/javascript" src="./js/lib/astar.js"></script>
+		<script type="text/javascript" src="./js/lib/graph.js"></script>
+		<script type="text/javascript" src="./js/functions.js"></script>
+		<script type="text/javascript" src="./js/config.js"></script>
+		<script type="text/javascript" src="./js/resources.js"></script>
+		<script type="text/javascript" src="./js/tile_collision.js"></script>
+		<script type="text/javascript" src="./js/btg.js"></script>
+		<script type="text/javascript" src="./js/socket.js"></script>
+		<script type="text/javascript" src="./js/pathSearcher.js"></script>
+		<script type="text/javascript" src="./js/loading.js"></script>
+		<script type="text/javascript" src="./js/Screen.js"></script>
+		<script type="text/javascript" src="./js/seaking.js"></script>
+		<script type="text/javascript" src="./js/CharacterBase.js"></script>
+		<script type="text/javascript" src="./js/PlayerEntity.js"></script>
+		<script type="text/javascript" src="./js/BoatBase.js"></script>
+		<script type="text/javascript" src="./js/PirateBoat.js"></script>
+		<script type="text/javascript" src="./js/NpcEntity.js"></script>
+		<script type="text/javascript" src="./js/EnemyEntity.js"></script>
+		<script type="text/javascript" src="./js/EnemyBoat.js"></script>
+		<script type="text/javascript" src="./js/Formation.js"></script>
+		<script type="text/javascript" src="./js/Fight.js"></script>
+		<script type="text/javascript" src="./js/ProgressEntity.js"></script>
+		<script type="text/javascript" src="./js/Buff.js"></script>
+		<script type="text/javascript" src="./js/MultipleImageLayer.js"></script>
+		<script type="text/javascript" src="./js/Seaport.js"></script>
+		<script type="text/javascript" src="./js/Effect.js"></script>
+		<script type="text/javascript" src="./js/Font.js"></script>
+		<script type="text/javascript" src="./js/Click.js"></script>
+		<script type="text/javascript" src="./js/ui/base.js"></script>
+		<script type="text/javascript" src="./main.js"></script>
+		
+		<script type="text/javascript" src="./js/lib/ui/lib.js"></script>
+		<script type="text/javascript" src="./js/lib/ui/uicore.js"></script>
+		<script type="text/javascript" src="./js/lib/ui/window.js"></script>
+		<script type="text/javascript" src="./js/lib/ui/iscroll.js"></script>
+		<script type="text/javascript" src="./js/ui_config_960.js"></script>
+		<script type="text/javascript" src="./js/ui_resources.js"></script>
+		<script type="text/javascript" src="./js/ui.js"></script>
+		<script type="text/javascript" src="./js/ui/mainScene.js"></script>
+		<script type="text/javascript" src="./js/ui/fightScene.js"></script>
+		<script type="text/javascript" src="./js/ui/baseWindow.js"></script>
+		<script type="text/javascript" src="./js/ui/windowManager.js"></script>
+		<script type="text/javascript" src="./js/ui/taskWindow.js"></script>
+		<script type="text/javascript" src="./js/ui/chatWindow.js"></script>
+		<script type="text/javascript" src="./js/ui/charactorWindow.js"></script>
+		<script type="text/javascript" src="./js/ui/packageWindow.js"></script>
+		<script type="text/javascript" src="./js/ui/dialogueWindow.js"></script>
+		<script type="text/javascript" src="./js/ui/skillWindow.js"></script>
+		<script type="text/javascript" src="./js/ui/pirateBoatWindow.js"></script>
+		<script type="text/javascript" src="./js/ui/strengthenWindow.js"></script>
+		<script type="text/javascript" src="./js/ui/strengthenWindow.recast.js"></script>
+		<script type="text/javascript" src="./js/ui/strengthenWindow.made.js"></script>
+		<script type="text/javascript" src="./js/ui/strengthenWindow.research.js"></script>
+		<script type="text/javascript" src="./js/ui/strengthenWindow.transform.js"></script>
+		<script type="text/javascript" src="./js/ui/ui.messageBox.js"></script>
+		<script type="text/javascript" src="./js/ui/formationWindow.js"></script>
+		<script type="text/javascript" src="./js/ui/formationWindow.formation.js"></script>
+		<script type="text/javascript" src="./js/ui/formationWindow.battleformation.js"></script>
+		<script type="text/javascript" src="./js/ui/formationWindow.governing.js"></script>
+		<script type="text/javascript" src="./js/ui/casinoScene.js"></script>
+		<script type="text/javascript" src="./js/ui/ui.dice.js"></script>
+		<script type="text/javascript" src="./js/ui/cellPopup.js"></script>
+		<script type="text/javascript" src="./js/ui/shopWindow.js"></script>
+	</body>
+</html>
