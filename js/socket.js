@@ -23,7 +23,7 @@
 	};
 	btg.socket = {
 		host: "222.126.242.105",
-		port: 8002,
+		port: 7002,
 		timer: null,
 		loaded: false,
 		status: {
