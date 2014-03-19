@@ -7,22 +7,22 @@
  */
 (function(btg) {
 	btg.game_socket = {
-		host: "project.wozlla.com",
+		host: "222.126.242.105",
 		port: 7002,
 		connect: null
 	};
 	btg.talk_socket = {
-		host: "project.wozlla.com",
+		host: "222.126.242.105",
 		port: 7002,
 		connect: null
 	};
 	btg.uc_socket = {
-		host: "project.wozlla.com",
+		host: "222.126.242.105",
 		port: 7002,
 		connect: null
 	};
 	btg.socket = {
-		host: "project.wozlla.com",
+		host: "222.126.242.105",
 		port: 8002,
 		timer: null,
 		loaded: false,
