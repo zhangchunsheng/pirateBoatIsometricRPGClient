@@ -239,9 +239,9 @@
 
 	btg.talkToWorld = function() {
 		var registerType = 1;
-		var loginName = "test";
-		var userId = 100006;
-		var sessionId = "1D74C6CE3A8DB50E6B4A2410E6E37D19";
+		var loginName = "didiwuliu";
+		var userId = 100002;
+		var sessionId = "A7D129D55A4D859ACED702663A730D3C";
 		var serverId = 1;
 		var message = "hello world!";
 		var lang = "zh_CN";
@@ -298,9 +298,9 @@
 	 */
 	btg.uc_socket.loginBySessionId = function() {
 		var registerType = 1;
-		var loginName = "wozlla";
+		var loginName = "html5";
 		var userId = 100001;
-		var sessionId = "29197A14BA49DDFCDA3C48559E413ADF";
+		var sessionId = "0C64899950075BA7A4A66B567A31611A";
 		var data = {
 			registerType: registerType,
 			loginName: loginName,
@@ -317,9 +317,9 @@
 	btg.uc_socket.getUserInfo = function() {
 		var userInfo = {
 			registerType: 1,
-			loginName: "wozlla",
+			loginName: "html5",
 			userId: 100001,
-			sessionId: "29197A14BA49DDFCDA3C48559E413ADF",
+			sessionId: "0C64899950075BA7A4A66B567A31611A",
 			serverId: 1,
 			lang: "zh_CN"
 		}

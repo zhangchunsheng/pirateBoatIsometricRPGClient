@@ -59,7 +59,7 @@ window.UI = UI;
 	UI.init = function(isDebug) {
 		UI.mainDiv = UI.getDom("body")[0];
 		UI.deviceType = btg.os;
-		UI.gameCanvas = btg.canvas || UI.getDom("#canvas");
+		UI.gameCanvas = btg.canvas || UI.getDom("#canvas") || UI.getDom("#jsapp > canvas");
 		window.sceneSize = UI.sceneSize = {
 			width: window.innerWidth,
 			height: window.innerHeight
